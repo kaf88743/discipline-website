@@ -8,7 +8,8 @@ mongoose.connect("mongodb://127.0.0.1:27017/discipline-record", {
 const Student = mongoose.model("Student", {
   name: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   age: {
     type: Number,
@@ -41,4 +42,3 @@ student1
   .catch(error => {
     console.log("Error", error);
   });
-console.log(student1);
